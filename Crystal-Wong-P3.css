@@ -1,0 +1,101 @@
+html{
+	/*custom mouse from https://custom-cursor.com/en/collection/minimal-style/minimal-axolotl*/
+	cursor: url(https://cdn.custom-cursor.com/db/10520/32/minimal-axolotl-cursor.png), default!important;
+	
+}
+
+body{
+	padding: 0;
+	margin: 0;
+	background: #f6cdac;
+/*	border: 2px solid black;*/
+}
+
+.window-buttons{
+	width: 10%;
+	padding-top: 3%;
+	padding-left: 3%;
+	z-index: 1;
+}
+
+.header-bar{
+	width: 100%;
+	background: #d26e5b;
+}
+
+h1{
+	font-family: ohno-blazeface,sans-serif;
+	font-weight: 100;
+	font-style: italic;
+	padding-top: 0%;
+	padding-bottom: 0%;
+	padding-left: 72vw;
+	padding-right: 3vw;
+	font-size: 4vw;
+	margin: 0;
+	color: white;
+}
+
+button{
+	margin-bottom: 0%;
+	margin-left: 71vw;
+	margin-right: 3vw;
+	margin-top: 1%;
+	margin-bottom: 2%;
+	padding: 2%;
+	color: deeppink;
+	background: white;
+	width: 25vw;
+	height: 6vh;
+/*	border-radius: 20%;*/
+
+/*	font-family: poppins,sans-serif;
+	font-weight: 400;
+	font-style: normal;*/
+}
+
+.colour-brush-bar{
+	display: grid;
+	grid-template-columns: repeat(14, 1fr);
+	grid-template-rows: 1;
+	grid-column-gap: 15%;
+	border-width: 0.05pt;
+	border-color: #482117;
+}
+
+.red{
+	background: #ce2729;
+}
+
+.orange{
+	background: #f7a538;
+}
+
+.yellow{
+	background: #feef57;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
