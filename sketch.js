@@ -1,72 +1,6 @@
-
-
-// var brushColor;
-// let slider;
-// let strokeType //= ROUND;
-
-// function draw() {
-//  if (mouseIsPressed) {
-//    if (mouseX <= 50) {
-//      if (mouseY <= 50) {
-//        brushColor = color(0, 0, 255);
-//      } else if (mouseY <= 100) {
-//        brushColor = color(66, 244, 194);
-//      } else if (mouseY <= 150) {
-//        brushColor = color(255, 0, 199);
-//      } else if (mouseY <= 200) {
-//        brushColor = color(249, 99, 0);
-//      } else if (mouseY <= 250) {
-//        strokeType = PROJECT;
-//      } else if (mouseY <= 300) {
-//        strokeType = ROUND;
-//     }
-//    }
-//    strokeCap(strokeType)
-//    push();
-//    strokeWeight(slider.value())
-//    stroke(brushColor)
-//    line(mouseX, mouseY, pmouseX, pmouseY);
-//    pop();
-//  }
-
-//  //noStroke();
-//  //start coding for your color squares here!
-//  stroke(color(0));
-//  fill(0, 0, 255);
-//  rect(0, 0, 50, 50);
-//  fill(66, 244, 194);
-//  rect(0, 50, 50, 50);
-//  fill(255, 0, 199);
-//  rect(0, 100, 50, 50);
-//  fill(249, 99, 0);
-//  rect(0, 150, 50, 50)
-
-//  fill(255);
-//  rect(0,200,50,50)
-//   fill(brushColor);
-//  rect(12.5,212.5,25,25)
-// fill(255);
-//  rect(0,250,50,50)
-//   fill(brushColor);
-//  ellipse(25,275,25,25)
-//  print(brushColor);
-
-// }
-
-
-
-
-
-
-
-
-
-
-
-
-
 // Drawing mechanism & colour bar help from:
 //https://stackoverflow.com/questions/69482566/how-to-paint-in-p5-js-with-switching-the-paint-brushes
+//Other sources for this project can be found at https://cryyystal.github.io/Crystal-Wong-Process-Website/Crystal-Process-P3.html
 var rate = 1;
 let button;
 
@@ -87,10 +21,7 @@ function setup() {
   brushColor = color(50);
   slider = createSlider(0, 50, 1);
   slider.position(450, 985);
-  slider.style('width', '250px');
   strokeType = ROUND;
-
-
 }
 
 function art(){
@@ -102,7 +33,6 @@ function clearButton(){
   clear()
   background("white")
 }
-
 
 //you might have to click a colour multiple times cause it doesn't respond immediately
 function mouseDragged() {
@@ -129,10 +59,6 @@ function mouseDragged() {
      } else if (mouseY <= 500) {
        brushColor = color("#878787");   //grey
      } else if (mouseY <= 550) {
-
-
-
-
        strokeType = PROJECT;
      } else if (mouseY <= 600) {
        strokeType = ROUND;
@@ -177,9 +103,6 @@ function mouseDragged() {
   fill("#878787");        //grey
  rect(0, 450, 50, 50)
 
-
-
-
   fill(255);
   rect(0,500,50,50)
   fill(brushColor);
@@ -193,6 +116,3 @@ function mouseDragged() {
   print(brushColor);
 
 }
-
-
-
