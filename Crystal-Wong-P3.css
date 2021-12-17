@@ -46,14 +46,14 @@ button{
 	height: 3%;
 }
 
-.colour-brush-bar{
+/*.colour-brush-bar{
 	display: grid;
 	grid-template-columns: repeat(14, 1fr);
 	grid-template-rows: 1;
 	grid-column-gap: 15%;
 	border-width: 0.05pt;
 	border-color: #482117;
-}
+}*/
 
 input{
 	width: 20%;
