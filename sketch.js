@@ -1,24 +1,25 @@
 var hue;
-var rainbow = true;
+// var rainbow = true;
 var rate = 1;
 let button;
-let img;
-let c = color(255, 204, 0);
+
+let colorPicker;
+
+
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background("white");
   hue = 0;
 
-  button = createButton("Export My Art");
+  button = createButton("Export Art");
   button.mousePressed(art);
 
+  button = createButton("Clear");
+  button.mousePressed(clearButton);
 
-
-
-
-
-
+  colorPicker = createColorPicker('#0f131a');
+  colorPicker.mouseClicked(cP);
 
   // button = createButton("Red");
   // button.mouseClicked(red);
@@ -33,19 +34,16 @@ function art(){
   save("My-Art");
 }
 
-function red(){
-  colorMode(HSL, 360);
-  noStroke();
-  fill(0, 200, 200);
-  ellipse(mouseX, mouseY, 50, 50);
+function clearButton(){
+  clear()
+  background("white")
 }
 
-// function orange(){
-//   if (mouseIsPressed === true) {
-//   colorMode(hsl,);
+// function red(){
+//   colorMode(HSL, 360);
 //   noStroke();
-//   fill();
-//   ellipse(mouseX, mouseY, 25, 25);
+//   fill(0, 200, 200);
+//   ellipse(mouseX, mouseY, 50, 50);
 // }
 
 // function draw() {
@@ -53,12 +51,13 @@ function red(){
 
 // }
 
-function orange(){
-  rect()
+
+
+
+function cP(){
+  (colorPicker.color());
+  colorPicker.mouseClicked();
 }
-
-
-
 
 
 
