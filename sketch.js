@@ -3,6 +3,7 @@ var rainbow = true;
 var rate = 1;
 let button;
 let img;
+let c = color(255, 204, 0);
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
@@ -12,8 +13,15 @@ function setup() {
   button = createButton("Export My Art");
   button.mousePressed(art);
 
-  button = createButton("Red");
-  button.mousePressed(red);
+
+
+
+
+
+
+
+  // button = createButton("Red");
+  // button.mouseClicked(red);
 
   // button = createButton("Orange");
   // button.mouseClicked(orange);
@@ -45,9 +53,17 @@ function red(){
 
 // }
 
+function orange(){
+  rect()
+}
+
+
+
+
 
 
 function mouseDragged() {
+
   // if (rainbow) {
   //   if (hue > 360) {
   //       hue = 0;
@@ -60,14 +76,8 @@ function mouseDragged() {
   noStroke();
   fill(0);
   ellipse(mouseX, mouseY, 25, 25);
-
-  if (mouseIsPressed === true) {
-    colorMode(HSL, 360);
-    noStroke();
-    fill(0);
-    ellipse(mouseX, mouseY, 25, 25);
-  }
 }
+
 
 // function keyPressed() {
 //   if (keyCode == 82) {
