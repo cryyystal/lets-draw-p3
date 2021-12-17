@@ -1,3 +1,5 @@
+
+
 // var brushColor;
 // let slider;
 // let strokeType //= ROUND;
@@ -63,23 +65,18 @@
 
 
 
-
+// Drawing mechanism & colour bar help from:
+//https://stackoverflow.com/questions/69482566/how-to-paint-in-p5-js-with-switching-the-paint-brushes
 var rate = 1;
 let button;
 
-
-
-
-
-
 var brushColor;
 let slider;
-let strokeType //= ROUND;
+let strokeType
 
 function setup() {
   createCanvas(windowWidth, windowHeight);
   background("white");
-  hue = 0;
 
   button = createButton("Export Art");
   button.mousePressed(art);
@@ -87,19 +84,9 @@ function setup() {
   button = createButton("Clear");
   button.mousePressed(clearButton);
 
-  // colorPicker = createColorPicker('#0f131a');
-  // colorPicker.mouseClicked(cP);
-
-
-
-
-
-
-
-
   brushColor = color(50);
   slider = createSlider(0, 50, 1);
-  slider.position(50, 10);
+  slider.position(450, 985);
   slider.style('width', '250px');
   strokeType = ROUND;
 
@@ -117,38 +104,37 @@ function clearButton(){
 }
 
 
-
-
-// function cP(){
-//   (colorPicker.color());
-//   // colorPicker.mouseClicked();
-// }
-
-
-
+//you might have to click a colour multiple times cause it doesn't respond immediately
 function mouseDragged() {
  if (mouseIsPressed) {
-   if (mouseX <= 100) {
-     if (mouseY <= 100) {
-       brushColor = color("#e23030");
+   if (mouseX <= 50) {
+     if (mouseY <= 50) {
+       brushColor = color("#e23030");   //red
      } else if (mouseY <= 100) {
-       brushColor = color("#f7a538");
+       brushColor = color("#f7a538");   //orange
      } else if (mouseY <= 150) {
-       brushColor = color("#feef57");
+       brushColor = color("#feef57");   //yellow
      } else if (mouseY <= 200) {
-       brushColor = color("#379444");
+       brushColor = color("#379444");   //green
      } else if (mouseY <= 250) {
-       brushColor = color("#49bcdc");
-     } else if (mouseY <= 250) {
-       brushColor = color("#b793c4");
-     } else if (mouseY <= 250) {
-       brushColor = color("#ef9cc6");
-     } else if (mouseY <= 250) {
+       brushColor = color("#49bcdc");   //blue
+     } else if (mouseY <= 300) {
+       brushColor = color("#b793c4");   //purple
+     } else if (mouseY <= 350) {
+       brushColor = color("#ef9cc6");   //pink
+     } else if (mouseY <= 400) {
+       brushColor = color("white");     //white
+     } else if (mouseY <= 450) {
+       brushColor = color("#0f131a");   //black
+     } else if (mouseY <= 500) {
+       brushColor = color("#878787");   //grey
+     } else if (mouseY <= 550) {
+
 
 
 
        strokeType = PROJECT;
-     } else if (mouseY <= 300) {
+     } else if (mouseY <= 600) {
        strokeType = ROUND;
     }
    }
@@ -182,56 +168,31 @@ function mouseDragged() {
  fill("#ef9cc6");         //pink
  rect(0, 300, 50, 50)
 
+ fill("white");           //white
+ rect(0, 350, 50, 50)
+
+  fill("#0f131a");        //black
+ rect(0, 400, 50, 50)
+
+  fill("#878787");        //grey
+ rect(0, 450, 50, 50)
+
 
 
 
   fill(255);
-  rect(0,200,50,50)
+  rect(0,500,50,50)
   fill(brushColor);
 
-  rect(12.5,212.5,25,25)
+  rect(12.5,512.5,25,25)
   fill(255);
-  rect(0,250,50,50)
+  rect(0,550,50,50)
 
   fill(brushColor);
-  ellipse(25,275,25,25)
+  ellipse(25,575,25,25)
   print(brushColor);
 
-
-  // if (rainbow) {
-  //   if (hue > 360) {
-  //       hue = 0;
-  //   } else {
-  //       hue += rate;
-  //   }
-  // }
-
-  // colorMode(HSL, 360);
-  // noStroke();
-  // fill(0);
-  // ellipse(mouseX, mouseY, 25, 25);
 }
-
-
-// function keyPressed() {
-//   if (keyCode == 82) {
-//     hue = 0;
-//     rainbow = false;
-//   }
-//   if (keyCode == 71) {
-//     hue = 125;
-//     rainbow = false;
-//   }
-//   if (keyCode == 66) {
-//     hue = 200;
-//     rainbow = false;
-//   }
-//   if (keyCode == 32) {
-//     rainbow = true;
-//     rate *= 2;
-//   }
-// }
-
 
 
 
